@@ -1,0 +1,19 @@
+импорт панд в качестве pd
+df = pd. read_csv ('cholera. csv')
+один=DF. форма
+print('Размеры таблицы равны: ', one)
+два = df. loc[13:]
+печать(два)
+three = df. loc[:4]
+печать(три)
+four=df. loc [:, ['region', 'country', 'total_cases']]
+печать(четыре)
+пять = df. loc[3: 12]
+печать (пять)
+six = df. loc[df. loc [:, 'deaths']>50.0] ['deaths']. count()
+print('Количество летальных исходов, больше 50 =',six)
+seven=df.loc[df.loc[:,'region']=='Азия']['region'].count()
+seven1=df.loc[df.loc[:,'region']!='Азия']['region'].count()
+if seven>seven1:
+    print('Азиатских стран больше их', seven)
+else: print('Всех остальных стран больше их', seven1)
